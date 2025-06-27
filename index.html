@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+    
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="header">
+                <h2>CALCULATOR</h2>
+                <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+            </div>
+            
+            <div class="display-container">
+                <div class="history" id="history"></div>
+                <div class="display">
+                    <input type="text" id="display" readonly placeholder="0">
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <!-- Scientific functions row -->
+                <button class="btn scientific" onclick="appendFunction('sin(')">sin</button>
+                <button class="btn scientific" onclick="appendFunction('cos(')">cos</button>
+                <button class="btn scientific" onclick="appendFunction('tan(')">tan</button>
+                <button class="btn scientific" onclick="appendFunction('log(')">log</button>
+                
+                <!-- Memory and advanced functions -->
+                <button class="btn memory" onclick="memoryClear()">MC</button>
+                <button class="btn memory" onclick="memoryRecall()">MR</button>
+                <button class="btn memory" onclick="memoryAdd()">M+</button>
+                <button class="btn memory" onclick="memorySubtract()">M-</button>
+                
+                <!-- Standard calculator buttons -->
+                <button class="btn clear" onclick="clearAll()">AC</button>
+                <button class="btn clear" onclick="clearEntry()">CE</button>
+                <button class="btn operator" onclick="appendToDisplay('/')" data-sound>÷</button>
+                <button class="btn operator" onclick="appendToDisplay('*')" data-sound>×</button>
+                
+                <button class="btn scientific" onclick="appendFunction('sqrt(')">√</button>
+                <button class="btn scientific" onclick="appendToDisplay('**')">x²</button>
+                <button class="btn scientific" onclick="appendToDisplay('**')">xʸ</button>
+                <button class="btn operator" onclick="deleteLast()" data-sound>⌫</button>
+                
+                <button class="btn number" onclick="appendToDisplay('7')" data-sound>7</button>
+                <button class="btn number" onclick="appendToDisplay('8')" data-sound>8</button>
+                <button class="btn number" onclick="appendToDisplay('9')" data-sound>9</button>
+                <button class="btn operator" onclick="appendToDisplay('-')" data-sound>-</button>
+                
+                <button class="btn number" onclick="appendToDisplay('4')" data-sound>4</button>
+                <button class="btn number" onclick="appendToDisplay('5')" data-sound>5</button>
+                <button class="btn number" onclick="appendToDisplay('6')" data-sound>6</button>
+                <button class="btn operator" onclick="appendToDisplay('+')" data-sound>+</button>
+                
+                <button class="btn number" onclick="appendToDisplay('1')" data-sound>1</button>
+                <button class="btn number" onclick="appendToDisplay('2')" data-sound>2</button>
+                <button class="btn number" onclick="appendToDisplay('3')" data-sound>3</button>
+                <button class="btn equals" onclick="calculate()" rowspan="2" data-sound>=</button>
+                
+                <button class="btn number zero" onclick="appendToDisplay('0')" data-sound>0</button>
+                <button class="btn number" onclick="appendToDisplay('.')" data-sound>.</button>
+                <button class="btn scientific" onclick="toggleSign()">±</button>
+            </div>
+            
+            <div class="footer">
+                <div class="sound-toggle" onclick="toggleSound()">🔊</div>
+                <div class="vibration-toggle" onclick="toggleVibration()">📳</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
