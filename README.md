@@ -34,3 +34,8 @@ This project is licensed under the MIT License.
 
 ## Port 
 http://127.0.0.1:5500/
+
+## Test
+
+QA Verified
+
