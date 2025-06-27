@@ -678,3 +678,4 @@ console.log('Keyboard shortcuts: Numbers, operators, Enter/=, Escape, Backspace'
 console.log('Memory shortcuts: Ctrl+M (add), Ctrl+R (recall), Ctrl+D (clear)');
 console.log('Mobile gestures: Swipe left/right, up/down for various functions');
 console.log('Easter egg: Try the Konami code! ⬆⬆⬇⬇⬅➡⬅➡BA');
+
